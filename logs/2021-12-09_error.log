@@ -1,0 +1,73 @@
+2021-12-09 14:03:07.278 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:03:07.893 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/favicon.ico
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:33:12.508 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:33:12.557 | ERROR    | execption.exception:all_exception_handler:64 - 全局异常
+URL:http://127.0.0.1:8000/api/v1/
+Headers:Headers({'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'cache-control': 'max-age=0', 'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Windows"', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'zh-CN,zh;q=0.9'})
+Traceback (most recent call last):
+  File "D:\Python37\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Python37\lib\site-packages\starlette\middleware\base.py", line 57, in __call__
+    task_group.cancel_scope.cancel()
+  File "D:\Python37\lib\site-packages\anyio\_backends\_asyncio.py", line 567, in __aexit__
+    raise exceptions[0]
+  File "D:\Python37\lib\site-packages\anyio\_backends\_asyncio.py", line 604, in _run_wrapped_task
+    await coro
+  File "D:\Python37\lib\site-packages\starlette\middleware\base.py", line 30, in coro
+    await self.app(scope, request.receive, send_stream.send)
+  File "D:\Python37\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Python37\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "D:\Python37\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Python37\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Python37\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "D:\Python37\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "D:\Python37\lib\site-packages\fastapi\routing.py", line 227, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "D:\Python37\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\PycharmProjects\fastapi_master\apps\home\views.py", line 7, in index_home
+    res = get_db().query(UserInfo).filter(UserInfo.id == 1)
+AttributeError: 'generator' object has no attribute 'query'
+
+2021-12-09 14:34:52.659 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:35:08.116 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:36:38.043 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/docs
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:36:38.299 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/openapi.json
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:51:25.927 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:51:31.114 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/docs
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:51:31.318 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/openapi.json
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:57:22.025 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:57:25.976 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/login
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
+2021-12-09 14:57:58.917 | INFO     | intercept.intercept:logger_request:18 - 访问记录:GET url:http://127.0.0.1:8000/api/v1/login
+headers:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+IP:127.0.0.1
